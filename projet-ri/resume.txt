@@ -1,0 +1,32 @@
+Récupérer des passages et trouver des réponses:
+- la récupération de passages de texte pertinents dans les documents, mais aussi sur la recherche de réponses à plusieurs phrases pour des requêtes Web non factoïdes
+
+-les test de questions et de réponses à plusieurs phrases basées sur les requêtes et documents TREC GOV2 pour développer des modèles de récupération pour les "answer passages".
+
+
+- Les deux questions principales qu'ils ont abordées dans cet article sont : est-ce qu'il existe des réponses au niveau du passage pour les requêtes Web plus longues, et 
+**est-ce que ces réponses au niveau du passage peuvent être trouvées en utilisant les méthodes existantes de récupération des passages.
+
+-la question des différentes granularités de texte qui peuvent être utilisées pour répondre à des requêtes. Les requêtes "factuelles" peuvent être répondues avec un simple fait ou une entité nommée, tandis que les requêtes "navigatoires" peuvent être répondues avec une page web. Les requêtes "informationnelles", notamment celles sous forme de question, peuvent avoir des réponses allant d'une seule phrase à plusieurs pages web.
+
+-Les requêtes de type "description" sont un exemple de requête pour laquelle une réponse à l'échelle du paragraphe peut être appropriée. 
+
+-RELATED WORK:
+- Les modèles de recherche de passage ont principalement été utilisés pour améliorer le classement des documents, mais peu d'attention a été accordée à la récupération directe de passages en tant que réponses finales à une requête.
+- Un effort pour créer une collection pour la récupération de réponses utilisant des documents web, ainsi que les résultats de méthodes de récupération de passage pour trouver des réponses.
+
+-ANNOTATING ANSWER:
+ comment les passages de réponse ont été annotés dans le cadre d'expériences menées sur la collection TREC GOV2. 
+-Les annotateurs ont trouvé 8 027 passages de réponse à 82 requêtes TREC, soit environ 97 passages par requête en moyenne. Parmi tous les passages annotés, 43% étaient des réponses parfaites, 44% étaient excellentes, 10% étaient bonnes et le reste étaient des réponses acceptables 
+- Cette expérience a confirmé que de nombreuses requêtes Web peuvent être répondues en utilisant un petit nombre de phrases.
+
+Evaluating ANSWER:
+- des mesures d'évaluation pour la recherche de passage dans le cadre de différentes tâches d'évaluation telles que HARD , INEX...  Dans ces tâches, des mesures ont été proposées pour évaluer les caractères pertinents dans les passages récupérés. Ces mesures, appelées mesures de caractères.
+- Le Passage2 MAP est utilisé pour évaluer les systèmes de recherche de passage, qui traite chaque caractère comme un document et calcule les mesures MAP en fonction du nombre de caractères pertinents récupérés. En outre, la précision basée sur les caractères est également rapportée.
+-l'évaluation des mesures de passage retrieval. De nouvelles mesures d'évaluation ont été proposées, comme R-precision, qui prennent en compte les caractères pertinents dans les passages récupérés.
+-5:
+
+-l'efficacité des méthodes de récupération de passages existantes pour trouver des réponses.
+
+
+Les expériences montrent que les méthodes actuelles de récupération de passages qui se concentrent sur la pertinence thématique ne fonctionnent pas bien pour la récupération de passages de réponse. Une analyse plus approfondie montre que les passages de réponse ont des scores distinctivement plus bas que les 20 meilleurs passages récupérés, et cela est cohérent pour tous les sujets. Les résultats montrent que les caractéristiques basées sur les fréquences de termes ne sont pas suffisantes pour récupérer les passages de réponse. Pour améliorer les résultats, il est nécessaire d’incorporer d’autres types de fonctionnalités dans les modèles de récupération. Les auteurs explorent actuellement une gamme de fonctionnalités, y compris des fonctionnalités linguistiques étudiées pour les données CQA et des fonctionnalités utilisées dans la génération de résumés.
